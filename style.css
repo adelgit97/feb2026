@@ -53,13 +53,16 @@ canvas {
 
 #controls button {
   padding: 12px 20px;
-  font-size: 18px;
+  font-size: 30px;
   background: var(--button-bg);
   color: var(--button-text);
   border: none;
   border-radius: 8px;
   cursor: pointer;
   margin-right: 10px;
+
+
+  touch-action: manipulation; /* tells browser no extra gestures */
 }
 
 #message {
@@ -169,3 +172,4 @@ canvas {
   cursor: pointer;
   margin-right: 10px;
 }
+

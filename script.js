@@ -3,7 +3,7 @@
  *************************/
 const CONFIG = {
   canvasWidth: 500,
-  canvasHeight: 600,
+  canvasHeight: 550,
   gravity: 0.6,
   jumpStrength: -10,
   pipeWidth: 60,
@@ -106,7 +106,7 @@ function initGame() {
     CONFIG.winWall.y = 0;
 
 
-  messageEl.textContent = "Press Space or Jump to Start!";
+  messageEl.textContent = "Press Jump btn / Space bar / touch game screen(phone) to Start!";
   draw(); // draw initial state
 }
 
@@ -330,7 +330,7 @@ function jump() {
 
 function endGame() {
 //   gameOver = true;
-   messageEl.textContent = `Game Over! Score: ${score} - Press Jump/Space to Restart`;
+   messageEl.textContent = `Game Over! Score: ${score} - Press Jump btn / Space bar / touch game screen(phone) to Restart`;
     gameOver = true;
   deathCount++;
 
@@ -413,3 +413,12 @@ function showEndScreen() {
   welcome.querySelector("p").textContent =
     "See you at 1 pm dear ❤️";
 }
+
+canvas.addEventListener("touchstart", e => {
+  e.preventDefault();
+  jump();
+}, { passive: false });
+canvas.addEventListener("click", e => {
+  e.preventDefault();
+  jump();
+}, { passive: false });
