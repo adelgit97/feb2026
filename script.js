@@ -9,7 +9,7 @@ const CONFIG = {
   pipeWidth: 60,
   pipeGap: 150,
   pipeDistance: 250,
-  totalPipes: 5,
+  totalPipes: 20,
   velocityX: 2,
   scoreMessageDelay: 500, // ms
 
