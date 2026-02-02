@@ -33,7 +33,7 @@ const pipe_body = new Image();
 pipe_body.src = "pipe_body.png";
 
 const carimg = new Image();
-carimg.src = "car-conv.png";
+carimg.src = "car-solid.png";
 
 const bgImg = new Image();
 bgImg.src = "sky2.png";
