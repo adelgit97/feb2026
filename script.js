@@ -116,19 +116,26 @@ function initGame() {
 
 function drawBird() {
 
-  const imgWidth = bird.radius * 2; // width in px (same as diameter)
-  const imgHeight = bird.radius * 2; // height in px (same as diameter)
+  //circle
+  // ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--bird-color'); ctx.beginPath();
+  // ctx.arc(bird.x, bird.y, bird.radius, 0, Math.PI*2); 
+  // ctx.fill();
+
+  //or image
+  const imgWidth = bird.radius * 2; 
+  const imgHeight = bird.radius * 2;
 
    const visualRadius = bird.radius * 2;
   const size = visualRadius * 2;
 
   ctx.drawImage(
     carimg,
-    bird.x - visualRadius, // top-left x
-    bird.y - visualRadius, // top-left y
+    bird.x - visualRadius, 
+    bird.y - visualRadius, 
     size,
     size
   );
+
 }
 
 
